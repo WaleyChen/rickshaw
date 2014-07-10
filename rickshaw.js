@@ -1874,6 +1874,8 @@ Rickshaw.Graph.Behavior.Series.Order = function(args) {
 		throw "couldn't find jQuery at window.jQuery";
 	}
 
+	require('jquery-ui');
+
 	if (typeof window.jQuery.ui == 'undefined') {
 		throw "couldn't find jQuery UI at window.jQuery.ui";
 	}
@@ -2430,6 +2432,7 @@ Rickshaw.Graph.RangeSlider = Rickshaw.Class.create({
 		var element = this.element;
 		var graph = this.graph;
 		var $ = jQuery;
+		require('jquery-ui');
 
 		var domain = graph.dataDomain();
 		var self = this;
